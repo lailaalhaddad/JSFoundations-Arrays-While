@@ -10,9 +10,9 @@
  */
 function isArrayLengthOdd(numbers) {
   if (numbers.length %2 == 1){
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+      return false;
   }
 }
   isArrayLengthOdd([1, 2, 3]);
@@ -30,9 +30,9 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   if (numbers.length %2 == 0){
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
   isArrayLengthEven([1, 2, 3]);
@@ -49,7 +49,7 @@ function isArrayLengthEven(numbers) {
 function addLailaToArray(instructors) {
   instructors = ["Mshary", "Hasan"];
   instructors.push("Laila");
-  console.log(instructors);
+  return instructors;
 }
   addLailaToArray("Laila");
 
@@ -63,7 +63,7 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   let eliminateTeam = ["Brazil", "Germany", "Italy"];
-  console.log(eliminateTeam.splice(2,1));
+  return eliminateTeam.splice(2,1);
 }
   eliminateTeam("Italy")
 
@@ -79,9 +79,9 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   if (fruits.length %2 == 0){
-    console.log(fruits.slice(2,4));
+    return fruits.slice(2,4);
   } else{
-    console.log("[]");
+    return [];
   }
 }
   secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
@@ -101,27 +101,27 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  * - Use string method .endsWith()
  */
-function youGottaCalmDown(shout) {
+// function youGottaCalmDown(shout) {
   // shout.forEach((element) => {
   //   if(shout.endwith('!')){
   //     shout.slice(3,11);
   //   }
   // });
   
-  for(let i = 0; i < shout.length-1; i++) {
-    if(shout.endwith('!')){
-         console.log(shout.slice(2,11));
-  }
-}
-  youGottaCalmDown("HI!!!!!!!!!!");
-  youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
-  youGottaCalmDown("Hellooooo");
-}
+//   for(let i = 0; i < shout.length-1; i++) {
+//     if(shout.endwith('!')){
+//          console.log(shout.slice(2,11));
+//   }
+// }
+//   youGottaCalmDown("HI!!!!!!!!!!");
+//   youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
+//   youGottaCalmDown("Hellooooo");
+// }
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
   addLailaToArray,
   eliminateTeam,
   secondHalfOfArrayIfItIsEven,
-  youGottaCalmDown,
+  // youGottaCalmDown,
 };
