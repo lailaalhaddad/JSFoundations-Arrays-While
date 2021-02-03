@@ -9,8 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  if (numbers.length %2 == 1){
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
+  isArrayLengthOdd([1, 2, 3]);
+  isArrayLengthOdd([1, 2, 3, 4]);
 
 /**
  * isArrayLengthEven(numbers):
@@ -23,8 +29,14 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+  if (numbers.length %2 == 0){
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
+  isArrayLengthEven([1, 2, 3]);
+  isArrayLengthEven([1, 2, 3, 4]);
 
 /**
  * addLailaToArray(instructors):
@@ -35,8 +47,11 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+  instructors = ["Mshary", "Hasan"];
+  instructors.push("Laila");
+  console.log(instructors);
 }
+  addLailaToArray("Laila");
 
 /**
  * eliminateTeam(teams):
@@ -47,8 +62,10 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+  let eliminateTeam = ["Brazil", "Germany", "Italy"];
+  console.log(eliminateTeam.splice(2,1));
 }
+  eliminateTeam("Italy")
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -61,8 +78,14 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  if (fruits.length %2 == 0){
+    console.log(fruits.slice(2,4));
+  } else{
+    console.log("[]");
+  }
 }
+  secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
+  secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
 
 /**
  * youGottaCalmDown(shout):
@@ -79,9 +102,21 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(shout) {
-  // Your code here
+  // shout.forEach((element) => {
+  //   if(shout.endwith('!')){
+  //     shout.slice(3,11);
+  //   }
+  // });
+  
+  for(let i = 0; i < shout.length-1; i++) {
+    if(shout.endwith('!')){
+         console.log(shout.slice(2,11));
+  }
 }
-
+  youGottaCalmDown("HI!!!!!!!!!!");
+  youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
+  youGottaCalmDown("Hellooooo");
+}
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
