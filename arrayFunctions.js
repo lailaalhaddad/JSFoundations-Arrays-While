@@ -10,11 +10,6 @@
  */
 function isArrayLengthOdd(numbers) {
   return numbers.length % 2 == 1 ;
-  // if (numbers.length %2 == 1){
-  //   return true;
-  // } else {
-  //     return false;
-  // }
 }
   // isArrayLengthOdd([1, 2, 3]);
   // isArrayLengthOdd([1, 2, 3, 4]);
@@ -31,12 +26,6 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   return numbers.length %2 == 0;
-  
-  // if (numbers.length %2 == 0){
-  //   return true;
-  // } else {
-  //   return false;
-  // }
 }
   // isArrayLengthEven([1, 2, 3]);
   // isArrayLengthEven([1, 2, 3, 4]);
@@ -50,7 +39,6 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  instructors = ["Mshary", "Hasan"];
   instructors.push("Laila");
   return instructors;
 }
@@ -65,8 +53,7 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  let eliminateTeam = (["Brazil", "Germany", "Italy"]);
-  return eliminateTeam.pop();
+  return teams.pop();
 }
   // eliminateTeam("Italy")
 
@@ -82,7 +69,7 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   if (fruits.length %2 == 0){
-    return fruits.slice(2,4);
+    return fruits.slice(fruits.length/2, fruits.length);
   } else{
     return [];
   }
@@ -105,24 +92,15 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(shout) {
-//   youGottaCalmDown.forEach((element) => {
-//     if(shout.endwith('!')){
-//       shout.slice(shout.endwith('!'),shout.length);
-//     }
-//   });
-  
-  for(let i = 0; i < 1; i++) {
-    if(shout.endsWith('!')){
-        console.log(shout.slice(0, -10));
-     } else {
-       console.log(shout);
-     }
+  while (shout.endsWith("!!")){
+    shout = shout.slice(0,-1);
   }
+    return shout;
 }
 
-youGottaCalmDown("HI!!!!!!!!!!");
-youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
-youGottaCalmDown("Hellooooo");
+// youGottaCalmDown("HI!!!!!!!!!!");
+// youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
+// youGottaCalmDown("Hellooooo");
 
 module.exports = {
   isArrayLengthOdd,
