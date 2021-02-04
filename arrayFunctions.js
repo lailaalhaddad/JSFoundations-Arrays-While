@@ -9,14 +9,15 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  if (numbers.length %2 == 1){
-    return true;
-  } else {
-      return false;
-  }
+  return numbers.length % 2 == 1 ;
+  // if (numbers.length %2 == 1){
+  //   return true;
+  // } else {
+  //     return false;
+  // }
 }
-  isArrayLengthOdd([1, 2, 3]);
-  isArrayLengthOdd([1, 2, 3, 4]);
+  // isArrayLengthOdd([1, 2, 3]);
+  // isArrayLengthOdd([1, 2, 3, 4]);
 
 /**
  * isArrayLengthEven(numbers):
@@ -29,14 +30,16 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  if (numbers.length %2 == 0){
-    return true;
-  } else {
-    return false;
-  }
+  return numbers.length %2 == 0;
+  
+  // if (numbers.length %2 == 0){
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 }
-  isArrayLengthEven([1, 2, 3]);
-  isArrayLengthEven([1, 2, 3, 4]);
+  // isArrayLengthEven([1, 2, 3]);
+  // isArrayLengthEven([1, 2, 3, 4]);
 
 /**
  * addLailaToArray(instructors):
@@ -51,7 +54,7 @@ function addLailaToArray(instructors) {
   instructors.push("Laila");
   return instructors;
 }
-  addLailaToArray("Laila");
+  // addLailaToArray("Laila");
 
 /**
  * eliminateTeam(teams):
@@ -62,10 +65,10 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  let eliminateTeam = ["Brazil", "Germany", "Italy"];
-  return eliminateTeam.splice(2,1);
+  let eliminateTeam = (["Brazil", "Germany", "Italy"]);
+  return eliminateTeam.pop();
 }
-  eliminateTeam("Italy")
+  // eliminateTeam("Italy")
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -84,8 +87,8 @@ function secondHalfOfArrayIfItIsEven(fruits) {
     return [];
   }
 }
-  secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
-  secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
+  // secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
+  // secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
 
 /**
  * youGottaCalmDown(shout):
@@ -101,27 +104,31 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  * - Use string method .endsWith()
  */
-// function youGottaCalmDown(shout) {
-  // shout.forEach((element) => {
-  //   if(shout.endwith('!')){
-  //     shout.slice(3,11);
-  //   }
-  // });
-  
-//   for(let i = 0; i < shout.length-1; i++) {
+function youGottaCalmDown(shout) {
+//   youGottaCalmDown.forEach((element) => {
 //     if(shout.endwith('!')){
-//          console.log(shout.slice(2,11));
-//   }
-// }
-//   youGottaCalmDown("HI!!!!!!!!!!");
-//   youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
-//   youGottaCalmDown("Hellooooo");
-// }
+//       shout.slice(shout.endwith('!'),shout.length);
+//     }
+//   });
+  
+  for(let i = 0; i < shout.length; i++) {
+    if(shout.endsWith('!')){
+         console.log(shout.slice(shout.endsWith('!'), -10));
+     } else {
+       console.log(shout);
+     }
+  }
+}
+
+youGottaCalmDown("HI!!!!!!!!!!");
+youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
+youGottaCalmDown("Hellooooo");
+
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
   addLailaToArray,
   eliminateTeam,
   secondHalfOfArrayIfItIsEven,
-  // youGottaCalmDown,
+  youGottaCalmDown,
 };
