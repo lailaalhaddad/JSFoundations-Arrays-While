@@ -111,9 +111,9 @@ function youGottaCalmDown(shout) {
 //     }
 //   });
   
-  for(let i = 0; i < shout.length; i++) {
+  for(let i = 0; i < 1; i++) {
     if(shout.endsWith('!')){
-         console.log(shout.slice(shout.endsWith('!'), -10));
+        console.log(shout.slice(0, -10));
      } else {
        console.log(shout);
      }
